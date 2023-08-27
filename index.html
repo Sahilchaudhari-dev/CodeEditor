@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +8,84 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/46724d20dd.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-    
-    <div class="container">
-     <div class="left">
-        <label <i class="fa-brands fa-html5"></i> HTML</label> <br> 
-        <textarea id="html-code" onkeyup="run()"></textarea>
-
-        <label <i class="fa-brands fa-css3"></i> CSS</label>
-        <textarea id="css-code" onkeyup="run()"></textarea>
-
-        <label <i class="fa-brands fa-js"></i> JAVASCRIPT</label>
-        <textarea id="javascript-code" onkeyup="run()"></textarea>
-     </div>
-     <div class="right">
-    <label <i class="fa-solid fa-play"></i> OUTPUT</label>
-     <iframe id="output"></iframe> 
+    <div class="buttondiv">
+        <input type="submit" class="my-button" value="Submit">
+        <input type="reset" class="my-button" value="Reset">
     </div>
-</div>
-<script>
+    <div class="container">
+        
+        <div class="left">
+            <label><i class="fa-brands fa-html5" style="color: #FF4500;"></i>HTML</label>
+            <textarea id="html-code" onclick="handleTextareaBlur()" onmouseout="emptyplaceholder()"
+                onkeyup="run()"></textarea>
+
+            <label> <i class="fa-brands fa-css3" style="color:blue;"></i>CSS</label>
+            <textarea id="css-code" onclick="handleTextarea1Blur()" onmouseout="emptyplaceholder1()"
+                onkeyup="run()"></textarea>
+
+            <label> <i class="fa-brands fa-js" style="color:yellow;"></i>JAVASCRIPT</label>
+            <textarea id="javascript-code" onclick="handleTextarea2Blur()" onmouseout="emptyplaceholder2()"
+                onkeyup="run()"></textarea>
+        </div>
+        <div class="right">
+            <label> <i class="fa-solid fa-play" style="color:green;"></i>OUTPUT</label>
+            <iframe id="output"></iframe>
+        </div>
+    </div>
+     </div>
     
-    
-function run(){
-     let htmlcode = document.getElementById("html-code").value;
-     let csscode = document.getElementById("css-code").value;
-     let javascriptcode = document.getElementById("javascript-code").value;
-     let output = document.getElementById("output");
+    <script>
+        function run() {
+            let htmlcode = document.getElementById("html-code").value;
+            let csscode = document.getElementById("css-code").value;    // for input
+            let javascriptcode = document.getElementById("javascript-code").value;
+            let output = document.getElementById("output");
 
-     output.contentDocument.body.innerHTML = htmlcode+ "<style>"+csscode +"</style>";
-     output.contentWindow.eval(javascriptcode);
-}
+            output.contentDocument.body.innerHTML = htmlcode + "<style>" + csscode + "</style>"; // it add all 3 langauges code and execute
+            output.contentWindow.eval(javascriptcode);
+        }
 
-</script>
+        function handleTextareaBlur() {                             //The onblur attribute calls the handleTextareaBlur() JavaScript function when the textarea loses focus. This function checks if the textarea is empty, and if so, it restores the placeholder text.
+            var textarea = document.getElementById('html-code');
+            {
+                textarea.placeholder = 'Enter your HTML code here';
+            }
+        }
 
+        function handleTextarea1Blur() {
+            var textarea = document.getElementById('css-code');
+            {
+                textarea.placeholder = 'Enter your CSS code here';
+            }
+        }
+        function handleTextarea2Blur() {
+            var textarea = document.getElementById('javascript-code');
+            {
+                textarea.placeholder = 'Enter your JAVASCRPIT code here';
+            }
 
+        }
+        function emptyplaceholder() {
+            var textarea = document.getElementById('html-code');
+            {
+                textarea.placeholder = '';
+            }
+        }
+        function emptyplaceholder1() {
+            var textarea = document.getElementById('css-code');
+            {
+                textarea.placeholder = '';
+            }
+        }
+        function emptyplaceholder2() {
+            var textarea = document.getElementById('javascript-code');
+            {
+                textarea.placeholder = '';
+            }
+        }  
+    </script>
 </body>
-</html>
 
+</html>
