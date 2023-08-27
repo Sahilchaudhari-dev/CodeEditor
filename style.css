@@ -12,6 +12,8 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+    border: #000;
+    border-width: 50px;
 }
  .container
 {
@@ -19,7 +21,6 @@ body{
     justify-content: center;
     width: 100%;
     height: 100vh;
-    padding: 20px;
     display: flex;
 }
 
@@ -40,7 +41,7 @@ textarea{
     border-width: 20%;
 }
 ::placeholder{
-    font-size: 10px;
+    font-size: 20px;
     color:grey;
 }
 
@@ -79,8 +80,12 @@ label {
 .buttondiv{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 20px;
     flex-direction: row;
     gap: 10px;
+   
 }
 
+  
+  
+  
