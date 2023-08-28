@@ -66,17 +66,40 @@ label {
     height: 3%;
     width: 100%;
 }
-.my-button{
+/* Add this CSS code to your existing <style> block or external CSS file */
+
+.my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
     background-color: #3498db;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            cursor: pointer;
-            font-size: 16px;
-            grid
-            grid-column: 100px;
-            
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
+
+.my-button:hover {
+    background-color:green;
+}
+
+
+.resetbtn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.resetbtn:hover {
+    background-color:green;
+}
+
 .buttondiv{
     display: flex;
     justify-content: center;
