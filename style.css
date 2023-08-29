@@ -6,7 +6,7 @@
 }
 
 body{
-    background: #454545;
+    background:black;
     color: #fff;
     display: flex;
     justify-content: center;
@@ -15,6 +15,19 @@ body{
     border: #000;
     border-width: 50px;
 }
+
+.head{
+    flex-direction: row;
+    display: flex;
+    justify-content: left;
+    margin-top:30px;
+    margin-left: 20px;
+    font-family: Poiret One;
+    font-size: 50px;
+    font-style: ;
+   
+}
+
  .container
 {
     display: flex;
@@ -72,12 +85,13 @@ label {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #3498db;
+    background-color: orangered;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border-radius: 20px;
 }
 
 .my-button:hover {
@@ -89,12 +103,16 @@ label {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #3498db;
+    background-color:orangered;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s;
+    border: 15px snow;
+    border-radius: 20px;
+    border-color: #f8f6f6;
+    padding: 10px 20px;
 }
 .resetbtn:hover {
     background-color:green;
@@ -103,9 +121,9 @@ label {
 .buttondiv{
     display: flex;
     justify-content: center;
-    margin-top: 20px;
+    margin-top: 0px;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
    
 }
 
