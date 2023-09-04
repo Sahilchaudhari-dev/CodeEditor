@@ -1,35 +1,88 @@
-*{
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-body{
-    background:black;
+body {
+    background-color: black;
     color: #fff;
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 10px;
-    border: #000;
-    border-width: 50px;
+  
 }
 
-.head{
+@media (max-width: 600px) {
+    body {
+        background-color: #080808;
+    }
+}
+
+.head {
     flex-direction: row;
-    display: flex;
+    display: inline-flex;
     justify-content: left;
-    margin-top:0px;
-    margin-left: 20px;
-    font-family: Poiret One;
+    margin-top: 5px;
+    margin-left: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-stretch:extra-expanded;
     font-size: 50px;
-    font-style: ;
-   
+
 }
 
- .container
-{
+@media(max-width:600px) {
+    .head {
+        justify-content: center;
+    }
+}
+
+menu{
+    display: flex;
+    flex-direction: row;
+    font-size: large;
+    margin-top: 9px;
+    float: right;
+    margin-left: 800px;
+}
+menu ul a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color:orangered;
+    border: #faf7f7;
+    border: 2px;
+    border-radius: 25px;
+    margin-left: 15px;
+}
+menu ul a:hover{
+    background-color: green;
+}
+@media (max-width: 600px) {
+    menu ul {
+      flex-direction: column;
+    }
+  
+    menu ul  {
+      flex: none;
+    }
+  
+    menu ul :not(:last-child) {
+      display: none;
+    }
+  
+    menu ul :last-child {
+      display: block;
+      text-align: center;
+    }
+  }
+
+
+.container {
     display: flex;
     justify-content: center;
     width: 100%;
@@ -37,62 +90,65 @@ body{
     display: flex;
 }
 
-.left , .right{
+.left,
+.right {
     flex-basis: 50%;
     padding: 10px;
     margin-top: 10px;
 
 }
 
-textarea{
+textarea {
     width: 100%;
     height: 28%;
     background: #0f0f0f;
-    color: #f8f6f6;
+    color: white;
     padding: 10px 20px;
     font-size: 18px;
     border-color: #080808;
     border-width: 20%;
-}
-::placeholder{
-    font-size: 20px;
-    color:grey;
+   
 }
 
-iframe{ 
+textarea:hover {
+    border-color: ;
+}
+
+::placeholder {
+    font-size: 20px;
+    color: grey;
+}
+
+.frameclass {
+    background-color: whitesmoke;
     width: 100%;
     height: 91%;
-    background: white;
-    border:20%;
+    border: 20%;
     border-style: double;
-    border-color: white;
-    outline:0%;
-}
-iframe:hover{
-    border-color:green;
-    
+    color: #fff;
+    border-color: black;
+    outline: 0%;
 }
 
-label i{
-    margin-right: 10p;
-     margin-left: 10px;
 
+
+iframe:hover {
+    border-color: black;
 }
 
 label {
     display: flex;
     align-items: center;
-    background: #000;
+    background: black;
     height: 3%;
     width: 100%;
 }
-/* Add this CSS code to your existing <style> block or external CSS file */
 
 .my-button {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: orangered;
+    background-color:orangered;
     color: white;
     border: none;
     border-radius: 5px;
@@ -102,15 +158,16 @@ label {
 }
 
 .my-button:hover {
-    background-color:green;
+    background-color: green;
+    border-radius: 10px;
 }
 
 
-.resetbtn{
+.resetbtn {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    background-color:orangered;
+    background-color: orangered;
     color: white;
     border: none;
     border-radius: 5px;
@@ -121,22 +178,48 @@ label {
     border-color: #f8f6f6;
     padding: 10px 20px;
 }
+
 .resetbtn:hover {
     background-color:green;
+    border-radius: 10px;
+
 }
 
-.buttondiv{
+.buttondiv {
     display: flex;
     justify-content: center;
     margin-top: 0px;
     flex-direction: row;
     gap: 20px;
 }
-.resetbutton{
-     background: orangered;  
-}
+
 @media (max-width: 600px) {
-    body {
-        font-size: 14px;
-      }
-  }
+    .container {
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    textarea {
+        margin-top: 10px;
+    }
+
+    iframe {
+        margin-top: 10px;
+    }
+}
+
+/* 
+@media (max-width: 800px) {
+    .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    textarea {
+        margin-top: 10px;
+    }
+
+    iframe {
+        margin-top: 10px;
+    }
+} */
